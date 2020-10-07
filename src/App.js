@@ -4,6 +4,7 @@ import './App.css';
 import { scaleBand, scaleLinear } from '@visx/scale';
 import { Group } from '@visx/group';
 import { Bar } from '@visx/shape';
+import { AxisLeft } from '@visx/axis';
 
 const GET_POSTS = gql`
 {
@@ -57,13 +58,19 @@ function App() {
       <svg width={width} height={height}>
         <rect width={width} height={height} fill='lightblue' rx={14} />
         <Group top={60} left={80}>
+          <AxisLeft
+                left={10}
+                labelOffset={45}
+                scale={yScale}
+                numTicks={10}
+                label="Number of Posts"
+          />
           {postsByMonth.map(p => {
             const month = getMonth(p);
             const barWidth = xScale.bandwidth();
             const barHeight = yMax - yScale(getMonthPosts(p));
             const barX = xScale(month);
             const barY = yMax - barHeight;
-
             return (
               <Bar
                 key={`bar-${month}`}
