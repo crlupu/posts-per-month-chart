@@ -66,6 +66,20 @@ function App() {
                 scale={yScale}
                 numTicks={10}
                 label="Number of Posts"
+                stroke="white"
+                tickStroke="white"
+                labelClassName="axisLabel"
+                labelProps={() => ({
+                  fill: 'white',
+                  dy: '2em',
+                  textAnchor: 'middle'
+                })}
+                tickLabelProps={() => ({
+                  fill: 'white',
+                  textAnchor: 'end',
+                  dy: '0.33em',
+                  dx: '-0.3em'
+                })}
           />
           {postsByMonth.map(p => {
             const month = getMonth(p);
@@ -89,6 +103,18 @@ function App() {
             label="Month"
             labelOffset={25}
             top={yMax}
+            stroke="white"
+            tickStroke="white"
+            hideAxisLine={true}
+            hideTicks={true}
+            labelClassName="axisLabel"
+            tickLabelProps={() => ({
+              fill: 'white',
+              textAnchor: 'middle'
+            })}
+            labelProps={() => ({
+              fill: 'white'
+            })}
           />
         </Group>
       </svg>
