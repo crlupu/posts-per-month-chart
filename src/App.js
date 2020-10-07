@@ -58,7 +58,7 @@ function App() {
     <div>
       <svg width={width} height={height}>
         <LinearGradient from="#1c6ca1" to="#07b4d4" id="barGradient" />
-        <rect width={width} height={height} fill='lightblue' rx={14} />
+        <rect width={width} height={height} fill='#131e3a' rx={14} />
         <Group top={60} left={80}>
           <AxisLeft
                 left={10}
