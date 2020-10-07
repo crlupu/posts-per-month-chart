@@ -4,7 +4,7 @@ import './App.css';
 import { scaleBand, scaleLinear } from '@visx/scale';
 import { Group } from '@visx/group';
 import { Bar } from '@visx/shape';
-import { AxisLeft } from '@visx/axis';
+import { AxisBottom, AxisLeft } from '@visx/axis';
 
 const GET_POSTS = gql`
 {
@@ -82,6 +82,12 @@ function App() {
               />
             )
           })};
+          <AxisBottom
+            scale={xScale}
+            label="Month"
+            labelOffset={25}
+            top={yMax}
+          />
         </Group>
       </svg>
     </div>
