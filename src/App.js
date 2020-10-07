@@ -22,7 +22,7 @@ const getMonthPosts = d => d.value;
 function App() {
   const { data, loading, error } = useQuery(GET_POSTS);
 
-  if (loading) return <p>Loading...</p>
+  if (loading) return <div className="chartWrapper"><div className="loadingSpinner"></div></div>
   if (error) return <p>Error</p>
 
   const months = [
