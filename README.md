@@ -1,3 +1,8 @@
+# Introduction
+
+This is a React web application that fetches a 10000 long list of posts from [mock GraphQL API](https://fakerql.stephix.uk/) and displays a bar chart representing the number of posts created in each month of 2019.
+The app uses [Apollo Client Library](https://www.apollographql.com/docs/react/) to fetch the data, then it procceses the received list of posts and generates the chart using [visx visualization components](https://github.com/airbnb/visx) 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
