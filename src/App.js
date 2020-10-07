@@ -6,6 +6,7 @@ import { Group } from '@visx/group';
 import { Bar } from '@visx/shape';
 import { AxisBottom, AxisLeft } from '@visx/axis';
 import { LinearGradient } from '@visx/gradient';
+import { GridRows } from '@visx/grid';
 
 const GET_POSTS = gql`
 {
@@ -55,13 +56,14 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="chartWrapper">
       <svg width={width} height={height}>
         <LinearGradient from="#1c6ca1" to="#07b4d4" id="barGradient" />
         <rect width={width} height={height} fill='#131e3a' rx={14} />
-        <Group top={60} left={80}>
+        <Group top={40} left={80}>
+          <GridRows scale={yScale} width={xMax} height={yMax} />
           <AxisLeft
-                left={10}
+                left={0}
                 labelOffset={45}
                 scale={yScale}
                 numTicks={10}

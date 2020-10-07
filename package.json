@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@visx/axis": "^1.0.0",
     "@visx/gradient": "^1.0.0",
+    "@visx/grid": "^1.0.0",
     "@visx/group": "^1.0.0",
     "@visx/scale": "^1.0.0",
     "@visx/shape": "^1.0.0",
